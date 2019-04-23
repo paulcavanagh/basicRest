@@ -18,4 +18,10 @@ public ResponseEntity<String> hello(@RequestParam(value="name", defaultValue = "
     
     return new ResponseEntity<>(String.format(responseBody, name), HttpStatus.OK);
 }
+
+@GetMapping("/hello2")
+public ResponseEntity<String> hello2(){
+    String response = "Simple test after the Easter Holidays";
+    return new ResponseEntity<>(response, HttpStatus.OK);
+}
 }
